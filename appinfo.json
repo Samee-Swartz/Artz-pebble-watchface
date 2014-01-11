@@ -1,0 +1,39 @@
+{
+  "uuid": "5be44f1d-d262-4ea6-aa30-edbe01e38a02",
+  "shortName": "Sylla's Watch",
+  "longName": "Sylla's Watch",
+  "companyName": "Sylla's Stuff",
+  "versionCode": 2,
+  "versionLabel": "2.1.0",
+  "watchapp": {
+    "watchface": true
+  },
+  "appKeys": {},
+  "resources": {
+    "media": [
+      {
+        "menuIcon": true,
+        "type": "png",
+        "name": "IMAGE_MENU_ICON",
+        "file": "images/menu_icon_simplicity.png"
+      },
+      {
+        "type": "font",
+        "name": "FONT_ROBOTO_CONDENSED_18",
+        "file": "fonts/Roboto-Condensed.ttf"
+      },
+      {
+        "type": "font",
+        "name": "FONT_DROID_SERIF_20",
+        "file": "fonts/DroidSerif.ttf"
+      },                
+      {
+        "characterRegex": "[:0-9]",
+        "type": "font",
+        "name": "FONT_DROID_SERIF_42",
+        "file": "fonts/DroidSerif.ttf"
+      }
+    ]
+  }
+}
+

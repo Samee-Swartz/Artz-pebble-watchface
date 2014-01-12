@@ -6,6 +6,7 @@ TextLayer *battery_layer;
 TextLayer *text_time_layer;
 Layer *line_layer;
 TextLayer *connection_layer;
+TextLayer *bar_layer;
 AppTimer *timer;
 
 void line_layer_update_callback(Layer *layer, GContext* ctx) {
@@ -17,7 +18,16 @@ void update_bluetooth(void *data){
   text_layer_set_text(connection_layer, "");
 }
 
-static void handle_bluetooth(bool connected){
+void handle_back_click(ClickRecognizerRef recognizer, void *context) {
+  vibes_short_pulse();
+}
+
+void click_config_provider(void *context) {
+  const uint16_t repeat_interval_ms = 1000;
+  window_single_repeating_click_subscribe(BUTTON_ID_UP, repeat_interval_ms, handle_back_click);
+}
+
+void handle_bluetooth(bool connected){
   text_layer_set_text(connection_layer, connected ? "BT: connected" : "BT: disconnected");
   vibes_double_pulse();
   if (connected)
@@ -76,30 +86,31 @@ void handle_deinit(void) {
 
 void handle_init(void) {
   window = window_create();
+  window_set_fullscreen(window, true);
   window_stack_push(window, true /* Animated */);
   window_set_background_color(window, GColorBlack);
+  window_set_click_config_provider(window, click_config_provider);
 
   Layer *window_layer = window_get_root_layer(window);
 
-  text_date_layer = text_layer_create(GRect(8, 90, 144-8, 168-68));
-  text_layer_set_text_color(text_date_layer, GColorWhite);
-  text_layer_set_background_color(text_date_layer, GColorClear);
+  text_date_layer = text_layer_create(GRect(0, 92, 145, 100));
+  text_layer_set_text_color(text_date_layer, GColorBlack);
+  text_layer_set_background_color(text_date_layer, GColorWhite);
   text_layer_set_font(text_date_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_DROID_SERIF_20)));
   text_layer_set_text_alignment(text_date_layer, GTextAlignmentCenter);
   layer_add_child(window_layer, text_layer_get_layer(text_date_layer));
 
-  text_time_layer = text_layer_create(GRect(7, 115, 135-7, 168-92));
-  text_layer_set_text_color(text_time_layer, GColorWhite);
+  text_time_layer = text_layer_create(GRect(0, 117, 145, 50));
+  text_layer_set_text_color(text_time_layer, GColorBlack);
   text_layer_set_background_color(text_time_layer, GColorClear);
   text_layer_set_font(text_time_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_DROID_SERIF_42)));
   text_layer_set_text_alignment(text_time_layer, GTextAlignmentCenter);
-  text_layer_set_size(text_time_layer, GSize(130, 100));
   layer_add_child(window_layer, text_layer_get_layer(text_time_layer));
 
   battery_layer = text_layer_create(GRect(0, 0, 144-0, 168-68));
   text_layer_set_text_color(battery_layer, GColorWhite);
   text_layer_set_background_color(battery_layer, GColorClear);
-  text_layer_set_font(battery_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_ROBOTO_CONDENSED_18)));
+  text_layer_set_font(battery_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_DROID_SERIF_BOLD_15)));           //FONT_ROBOTO_CONDENSED_18)));
   text_layer_set_text_alignment(battery_layer, GTextAlignmentCenter);
   text_layer_set_text(battery_layer, "... charged");
   layer_add_child(window_layer, text_layer_get_layer(battery_layer));
@@ -107,15 +118,20 @@ void handle_init(void) {
   connection_layer = text_layer_create(GRect(0, 22, 145, 20));
   text_layer_set_text_color(connection_layer, GColorWhite);
   text_layer_set_background_color(connection_layer, GColorClear);
-  text_layer_set_font(connection_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_ROBOTO_CONDENSED_18)));
+  text_layer_set_font(connection_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_DROID_SERIF_BOLD_15))); //FONT_ROBOTO_CONDENSED_18)));
   text_layer_set_text_alignment(connection_layer, GTextAlignmentCenter);
   text_layer_set_text(connection_layer, "");
   layer_add_child(window_layer, text_layer_get_layer(connection_layer));
 
+  bar_layer = text_layer_create(GRect(0, 118, 145, 3));
+  text_layer_set_background_color(bar_layer, GColorBlack);
+  layer_add_child(window_layer, text_layer_get_layer(bar_layer));
+
   GRect line_frame = GRect(8, 117, 130, 2);
   line_layer = layer_create(line_frame);
+//  layer_set_color(line_layer, GColorBlack);
   layer_set_update_proc(line_layer, line_layer_update_callback);
-  layer_add_child(window_layer, line_layer);
+//  layer_add_child(window_layer, line_layer);
 
   tick_timer_service_subscribe(MINUTE_UNIT, handle_minute_tick);
   battery_state_service_subscribe(&handle_battery);

@@ -1,8 +1,8 @@
 {
   "uuid": "5be44f1d-d262-4ea6-aa30-edbe01e38a02",
-  "shortName": "Sylla's Watch",
-  "longName": "Sylla's Watch",
-  "companyName": "Sylla's Stuff",
+  "shortName": "Watchface - linked",
+  "longName": "Watchface - Am I Linked?",
+  "companyName": "App Artz",
   "versionCode": 2,
   "versionLabel": "2.2.0",
   "watchapp": {

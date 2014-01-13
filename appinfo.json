@@ -1,12 +1,12 @@
 {
-  "uuid": "5be44f1d-d262-4ea6-aa30-edbe01e38a02",
+  "uuid": "124288f5-4d75-4f89-a839-b4ec5f45f2c7",
   "shortName": "Watchface - linked",
   "longName": "Watchface - Am I Linked?",
   "companyName": "App Artz",
-  "versionCode": 2,
-  "versionLabel": "2.2.0",
+  "versionCode": 3,
+  "versionLabel": "3.0.0",
   "watchapp": {
-    "watchface": true
+    "watchface": false
   },
   "appKeys": {},
   "resources": {
@@ -41,7 +41,7 @@
         "characterRegex": "[:0-9]",
         "type": "font",
         "name": "FONT_DROID_SERIF_42",
-        "file": "fonts/DroidSerif.ttf"
+        "file": "fonts/DroidSerif-Bold.ttf"
       }
     ]
   }

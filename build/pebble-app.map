@@ -1,18 +1,19 @@
 Archive member included because of file (symbol)
 
 /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
-                              src/date-time.c.11.o (app_event_loop)
+                              src/date-time.c.13.o (app_event_loop)
 
 Allocating common symbols
 Common symbol       size              file
 
-timer               0x4               src/date-time.c.11.o
-battery_layer       0x4               src/date-time.c.11.o
-connection_layer    0x4               src/date-time.c.11.o
-text_time_layer     0x4               src/date-time.c.11.o
-text_date_layer     0x4               src/date-time.c.11.o
-window              0x4               src/date-time.c.11.o
-line_layer          0x4               src/date-time.c.11.o
+timer               0x4               src/date-time.c.13.o
+battery_layer       0x4               src/date-time.c.13.o
+connection_layer    0x4               src/date-time.c.13.o
+text_time_layer     0x4               src/date-time.c.13.o
+bar_layer           0x4               src/date-time.c.13.o
+text_date_layer     0x4               src/date-time.c.13.o
+window              0x4               src/date-time.c.13.o
+line_layer          0x4               src/date-time.c.13.o
 
 Discarded input sections
 
@@ -28,10 +29,12 @@ Discarded input sections
  .jcr           0x0000000000000000        0x0 /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
  .tm_clone_table
                 0x0000000000000000        0x0 /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
- .text          0x0000000000000000        0x0 src/date-time.c.11.o
- .bss           0x0000000000000000        0x0 src/date-time.c.11.o
- .text          0x0000000000000000        0x0 appinfo.auto.c.11.o
- .bss           0x0000000000000000        0x0 appinfo.auto.c.11.o
+ .text          0x0000000000000000        0x0 src/date-time.c.13.o
+ .bss           0x0000000000000000        0x0 src/date-time.c.13.o
+ .text.line_layer_update_callback
+                0x0000000000000000       0x28 src/date-time.c.13.o
+ .text          0x0000000000000000        0x0 appinfo.auto.c.13.o
+ .bss           0x0000000000000000        0x0 appinfo.auto.c.13.o
  .bss           0x0000000000000000        0x0 /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
  .text.accel_data_service_subscribe__deprecated
                 0x0000000000000000        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
@@ -98,8 +101,6 @@ Discarded input sections
  .text.app_log  0x0000000000000000        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
  .text.app_message_deregister_callbacks
                 0x0000000000000000        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
- .text.app_message_open
-                0x0000000000000000        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
  .text.app_sync_deinit
                 0x0000000000000000        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
  .text.app_sync_get
@@ -129,8 +130,6 @@ Discarded input sections
  .text.bitmap_layer_set_bitmap
                 0x0000000000000000        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
  .text.bitmap_layer_set_compositing_mode
-                0x0000000000000000        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
- .text.bluetooth_connection_service_peek
                 0x0000000000000000        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
  .text.click_number_of_clicks_counted
                 0x0000000000000000        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
@@ -220,6 +219,8 @@ Discarded input sections
                 0x0000000000000000        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
  .text.graphics_context_set_compositing_mode
                 0x0000000000000000        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
+ .text.graphics_context_set_fill_color
+                0x0000000000000000        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
  .text.graphics_context_set_stroke_color
                 0x0000000000000000        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
  .text.graphics_context_set_text_color
@@ -237,6 +238,8 @@ Discarded input sections
  .text.graphics_draw_round_rect
                 0x0000000000000000        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
  .text.graphics_fill_circle
+                0x0000000000000000        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
+ .text.graphics_fill_rect
                 0x0000000000000000        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
  .text.graphics_text_layout_get_max_used_size
                 0x0000000000000000        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
@@ -264,9 +267,13 @@ Discarded input sections
                 0x0000000000000000        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
  .text.inverter_layer_get_layer
                 0x0000000000000000        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
+ .text.layer_create
+                0x0000000000000000        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
  .text.layer_create_with_data
                 0x0000000000000000        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
  .text.layer_destroy
+                0x0000000000000000        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
+ .text.layer_get_bounds
                 0x0000000000000000        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
  .text.layer_get_clips
                 0x0000000000000000        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
@@ -295,6 +302,8 @@ Discarded input sections
  .text.layer_set_frame
                 0x0000000000000000        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
  .text.layer_set_hidden
+                0x0000000000000000        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
+ .text.layer_set_update_proc
                 0x0000000000000000        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
  .text.light_enable
                 0x0000000000000000        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
@@ -464,6 +473,8 @@ Discarded input sections
                 0x0000000000000000        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
  .text.text_layer_set_overflow_mode
                 0x0000000000000000        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
+ .text.text_layer_set_size
+                0x0000000000000000        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
  .text.time     0x0000000000000000        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
  .text.time_ms  0x0000000000000000        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
  .text.vibes_cancel
@@ -471,8 +482,6 @@ Discarded input sections
  .text.vibes_enqueue_custom_pattern
                 0x0000000000000000        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
  .text.vibes_long_pulse
-                0x0000000000000000        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
- .text.vibes_short_pulse
                 0x0000000000000000        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
  .text.window_destroy
                 0x0000000000000000        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
@@ -482,11 +491,7 @@ Discarded input sections
                 0x0000000000000000        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
  .text.window_is_loaded
                 0x0000000000000000        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
- .text.window_set_click_config_provider
-                0x0000000000000000        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
  .text.window_set_click_config_provider_with_context
-                0x0000000000000000        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
- .text.window_set_fullscreen
                 0x0000000000000000        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
  .text.window_set_status_bar_icon
                 0x0000000000000000        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
@@ -531,8 +536,6 @@ Discarded input sections
  .text.app_message_set_context
                 0x0000000000000000        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
  .text.window_long_click_subscribe
-                0x0000000000000000        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
- .text.window_multi_click_subscribe
                 0x0000000000000000        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
  .text.window_raw_click_subscribe
                 0x0000000000000000        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
@@ -582,8 +585,8 @@ Linker script and memory map
 
 LOAD /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crti.o
 LOAD /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
-LOAD src/date-time.c.11.o
-LOAD appinfo.auto.c.11.o
+LOAD src/date-time.c.13.o
+LOAD appinfo.auto.c.13.o
 LOAD /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a
 START GROUP
 LOAD /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a
@@ -594,206 +597,212 @@ LOAD /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/arm-cs-tools/bin/../lib/gcc/arm-
 
 .header         0x0000000000000000       0x82
  *(.pbl_header)
- .pbl_header    0x0000000000000000       0x82 appinfo.auto.c.11.o
+ .pbl_header    0x0000000000000000       0x82 appinfo.auto.c.13.o
                 0x0000000000000000                __pbl_app_info
 
-.text           0x0000000000000084      0x62d
+.text           0x0000000000000084      0x655
  *(.text)
  .text          0x0000000000000084       0x14 /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
  *(.text.*)
  .text.update_bluetooth
-                0x0000000000000098       0x20 src/date-time.c.11.o
+                0x0000000000000098       0x20 src/date-time.c.13.o
                 0x0000000000000098                update_bluetooth
  .text.handle_battery
-                0x00000000000000b8       0x60 src/date-time.c.11.o
+                0x00000000000000b8       0x60 src/date-time.c.13.o
                 0x00000000000000b8                handle_battery
  .text.handle_minute_tick
-                0x0000000000000118       0xbc src/date-time.c.11.o
+                0x0000000000000118       0xbc src/date-time.c.13.o
                 0x0000000000000118                handle_minute_tick
- .text.line_layer_update_callback
-                0x00000000000001d4       0x28 src/date-time.c.11.o
-                0x00000000000001d4                line_layer_update_callback
+ .text.click_config_provider
+                0x00000000000001d4       0x20 src/date-time.c.13.o
+                0x00000000000001d4                click_config_provider
+ .text.handle_back_click
+                0x00000000000001f4       0x12 src/date-time.c.13.o
+                0x00000000000001f4                handle_back_click
+ *fill*         0x0000000000000206        0x2 
  .text.handle_bluetooth
-                0x00000000000001fc       0x54 src/date-time.c.11.o
+                0x0000000000000208       0x54 src/date-time.c.13.o
+                0x0000000000000208                handle_bluetooth
  .text.handle_deinit
-                0x0000000000000250       0x12 src/date-time.c.11.o
-                0x0000000000000250                handle_deinit
- *fill*         0x0000000000000262        0x2 
+                0x000000000000025c       0x12 src/date-time.c.13.o
+                0x000000000000025c                handle_deinit
+ *fill*         0x000000000000026e        0x2 
  .text.handle_init
-                0x0000000000000264      0x218 src/date-time.c.11.o
-                0x0000000000000264                handle_init
+                0x0000000000000270      0x238 src/date-time.c.13.o
+                0x0000000000000270                handle_init
  .text.startup.main
-                0x000000000000047c       0x12 src/date-time.c.11.o
-                0x000000000000047c                main
- *fill*         0x000000000000048e        0x2 
+                0x00000000000004a8       0x12 src/date-time.c.13.o
+                0x00000000000004a8                main
+ *fill*         0x00000000000004ba        0x2 
  .text.app_event_loop
-                0x0000000000000490        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
-                0x0000000000000490                app_event_loop
+                0x00000000000004bc        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
+                0x00000000000004bc                app_event_loop
+ .text.app_message_open
+                0x00000000000004c8        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
+                0x00000000000004c8                app_message_open
  .text.app_timer_register
-                0x000000000000049c        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
-                0x000000000000049c                app_timer_register
+                0x00000000000004d4        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
+                0x00000000000004d4                app_timer_register
  .text.battery_state_service_peek
-                0x00000000000004a8        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
-                0x00000000000004a8                battery_state_service_peek
+                0x00000000000004e0        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
+                0x00000000000004e0                battery_state_service_peek
  .text.battery_state_service_subscribe
-                0x00000000000004b4        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
-                0x00000000000004b4                battery_state_service_subscribe
+                0x00000000000004ec        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
+                0x00000000000004ec                battery_state_service_subscribe
  .text.battery_state_service_unsubscribe
-                0x00000000000004c0        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
-                0x00000000000004c0                battery_state_service_unsubscribe
+                0x00000000000004f8        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
+                0x00000000000004f8                battery_state_service_unsubscribe
+ .text.bluetooth_connection_service_peek
+                0x0000000000000504        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
+                0x0000000000000504                bluetooth_connection_service_peek
  .text.bluetooth_connection_service_subscribe
-                0x00000000000004cc        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
-                0x00000000000004cc                bluetooth_connection_service_subscribe
+                0x0000000000000510        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
+                0x0000000000000510                bluetooth_connection_service_subscribe
  .text.bluetooth_connection_service_unsubscribe
-                0x00000000000004d8        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
-                0x00000000000004d8                bluetooth_connection_service_unsubscribe
+                0x000000000000051c        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
+                0x000000000000051c                bluetooth_connection_service_unsubscribe
  .text.clock_is_24h_style
-                0x00000000000004e4        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
-                0x00000000000004e4                clock_is_24h_style
+                0x0000000000000528        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
+                0x0000000000000528                clock_is_24h_style
  .text.fonts_load_custom_font
-                0x00000000000004f0        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
-                0x00000000000004f0                fonts_load_custom_font
- .text.graphics_context_set_fill_color
-                0x00000000000004fc        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
-                0x00000000000004fc                graphics_context_set_fill_color
- .text.graphics_fill_rect
-                0x0000000000000508        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
-                0x0000000000000508                graphics_fill_rect
+                0x0000000000000534        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
+                0x0000000000000534                fonts_load_custom_font
  .text.layer_add_child
-                0x0000000000000514        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
-                0x0000000000000514                layer_add_child
- .text.layer_create
-                0x0000000000000520        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
-                0x0000000000000520                layer_create
- .text.layer_get_bounds
-                0x000000000000052c        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
-                0x000000000000052c                layer_get_bounds
- .text.layer_set_update_proc
-                0x0000000000000538        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
-                0x0000000000000538                layer_set_update_proc
- .text.memmove  0x0000000000000544        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
-                0x0000000000000544                memmove
+                0x0000000000000540        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
+                0x0000000000000540                layer_add_child
+ .text.memmove  0x000000000000054c        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
+                0x000000000000054c                memmove
  .text.resource_get_handle
-                0x0000000000000550        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
-                0x0000000000000550                resource_get_handle
+                0x0000000000000558        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
+                0x0000000000000558                resource_get_handle
  .text.snprintf
-                0x000000000000055c        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
-                0x000000000000055c                snprintf
- .text.strcpy   0x0000000000000568        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
-                0x0000000000000568                strcpy
+                0x0000000000000564        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
+                0x0000000000000564                snprintf
+ .text.strcpy   0x0000000000000570        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
+                0x0000000000000570                strcpy
  .text.strftime
-                0x0000000000000574        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
-                0x0000000000000574                strftime
+                0x000000000000057c        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
+                0x000000000000057c                strftime
  .text.text_layer_create
-                0x0000000000000580        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
-                0x0000000000000580                text_layer_create
+                0x0000000000000588        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
+                0x0000000000000588                text_layer_create
  .text.text_layer_get_layer
-                0x000000000000058c        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
-                0x000000000000058c                text_layer_get_layer
+                0x0000000000000594        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
+                0x0000000000000594                text_layer_get_layer
  .text.text_layer_set_background_color
-                0x0000000000000598        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
-                0x0000000000000598                text_layer_set_background_color
+                0x00000000000005a0        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
+                0x00000000000005a0                text_layer_set_background_color
  .text.text_layer_set_font
-                0x00000000000005a4        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
-                0x00000000000005a4                text_layer_set_font
- .text.text_layer_set_size
-                0x00000000000005b0        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
-                0x00000000000005b0                text_layer_set_size
+                0x00000000000005ac        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
+                0x00000000000005ac                text_layer_set_font
  .text.text_layer_set_text
-                0x00000000000005bc        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
-                0x00000000000005bc                text_layer_set_text
+                0x00000000000005b8        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
+                0x00000000000005b8                text_layer_set_text
  .text.text_layer_set_text_alignment
-                0x00000000000005c8        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
-                0x00000000000005c8                text_layer_set_text_alignment
+                0x00000000000005c4        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
+                0x00000000000005c4                text_layer_set_text_alignment
  .text.text_layer_set_text_color
-                0x00000000000005d4        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
-                0x00000000000005d4                text_layer_set_text_color
+                0x00000000000005d0        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
+                0x00000000000005d0                text_layer_set_text_color
  .text.tick_timer_service_subscribe
-                0x00000000000005e0        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
-                0x00000000000005e0                tick_timer_service_subscribe
+                0x00000000000005dc        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
+                0x00000000000005dc                tick_timer_service_subscribe
  .text.tick_timer_service_unsubscribe
-                0x00000000000005ec        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
-                0x00000000000005ec                tick_timer_service_unsubscribe
+                0x00000000000005e8        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
+                0x00000000000005e8                tick_timer_service_unsubscribe
  .text.vibes_double_pulse
-                0x00000000000005f8        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
-                0x00000000000005f8                vibes_double_pulse
+                0x00000000000005f4        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
+                0x00000000000005f4                vibes_double_pulse
+ .text.vibes_short_pulse
+                0x0000000000000600        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
+                0x0000000000000600                vibes_short_pulse
  .text.window_create
-                0x0000000000000604        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
-                0x0000000000000604                window_create
+                0x000000000000060c        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
+                0x000000000000060c                window_create
  .text.window_get_root_layer
-                0x0000000000000610        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
-                0x0000000000000610                window_get_root_layer
+                0x0000000000000618        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
+                0x0000000000000618                window_get_root_layer
  .text.window_set_background_color
-                0x000000000000061c        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
-                0x000000000000061c                window_set_background_color
+                0x0000000000000624        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
+                0x0000000000000624                window_set_background_color
+ .text.window_set_click_config_provider
+                0x0000000000000630        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
+                0x0000000000000630                window_set_click_config_provider
+ .text.window_set_fullscreen
+                0x000000000000063c        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
+                0x000000000000063c                window_set_fullscreen
  .text.window_stack_push
-                0x0000000000000628        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
-                0x0000000000000628                window_stack_push
+                0x0000000000000648        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
+                0x0000000000000648                window_stack_push
+ .text.window_multi_click_subscribe
+                0x0000000000000654        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
+                0x0000000000000654                window_multi_click_subscribe
  *(.rodata)
- .rodata        0x0000000000000634       0x2c src/date-time.c.11.o
+ .rodata        0x0000000000000660       0x28 src/date-time.c.13.o
  *(.rodata*)
  .rodata.str1.1
-                0x0000000000000660       0x51 src/date-time.c.11.o
+                0x0000000000000688       0x51 src/date-time.c.13.o
                                          0x52 (size before relaxing)
 
-.glue_7         0x00000000000006b4        0x0
+.glue_7         0x00000000000006dc        0x0
  .glue_7        0x0000000000000000        0x0 linker stubs
 
-.glue_7t        0x00000000000006b4        0x0
+.glue_7t        0x00000000000006dc        0x0
  .glue_7t       0x0000000000000000        0x0 linker stubs
 
-.vfp11_veneer   0x00000000000006b4        0x0
+.vfp11_veneer   0x00000000000006dc        0x0
  .vfp11_veneer  0x0000000000000000        0x0 linker stubs
 
-.v4_bx          0x00000000000006b4        0x0
+.v4_bx          0x00000000000006dc        0x0
  .v4_bx         0x0000000000000000        0x0 linker stubs
 
-.iplt           0x00000000000006b4        0x0
+.iplt           0x00000000000006dc        0x0
  .iplt          0x0000000000000000        0x0 /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
 
-.rel.dyn        0x00000000000006b4        0x0
+.rel.dyn        0x00000000000006dc        0x0
  .rel.iplt      0x0000000000000000        0x0 /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
  .rel.got       0x0000000000000000        0x0 /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
 
-.data           0x00000000000006b4       0x28
+.data           0x00000000000006dc       0x28
  *(.data)
- .data          0x00000000000006b4        0x0 /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crti.o
- .data          0x00000000000006b4        0x4 /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
-                0x00000000000006b4                __dso_handle
- .data          0x00000000000006b8        0x0 src/date-time.c.11.o
- .data          0x00000000000006b8        0x0 appinfo.auto.c.11.o
- .data          0x00000000000006b8        0x0 /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
- .data          0x00000000000006b8        0x0 /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtend.o
- .data          0x00000000000006b8        0x0 /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtn.o
+ .data          0x00000000000006dc        0x0 /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crti.o
+ .data          0x00000000000006dc        0x4 /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
+                0x00000000000006dc                __dso_handle
+ .data          0x00000000000006e0        0x0 src/date-time.c.13.o
+ .data          0x00000000000006e0        0x0 appinfo.auto.c.13.o
+ .data          0x00000000000006e0        0x0 /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
+ .data          0x00000000000006e0        0x0 /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtend.o
+ .data          0x00000000000006e0        0x0 /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtn.o
  *(.data.*)
- .data.battery_text.6429
-                0x00000000000006b8        0xd src/date-time.c.11.o
- .data.time_text.6434
-                0x00000000000006c5        0x9 src/date-time.c.11.o
- .data.date_text.6435
-                0x00000000000006ce        0xe src/date-time.c.11.o
+ .data.time_text.6444
+                0x00000000000006e0        0x9 src/date-time.c.13.o
+ .data.battery_text.6439
+                0x00000000000006e9        0xd src/date-time.c.13.o
+ .data.date_text.6445
+                0x00000000000006f6        0xe src/date-time.c.13.o
 
-.igot.plt       0x00000000000006dc        0x0
+.igot.plt       0x0000000000000704        0x0
  .igot.plt      0x0000000000000000        0x0 /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
 
-.got            0x00000000000006dc       0x1c
- .got           0x00000000000006dc       0x1c /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
+.got            0x0000000000000704       0x1c
+ .got           0x0000000000000704       0x1c /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
 
-.got.plt        0x00000000000006f8        0xc
- .got.plt       0x00000000000006f8        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
-                0x00000000000006f8                _GLOBAL_OFFSET_TABLE_
+.got.plt        0x0000000000000720        0xc
+ .got.plt       0x0000000000000720        0xc /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
+                0x0000000000000720                _GLOBAL_OFFSET_TABLE_
 
-.bss            0x0000000000000704       0x1c
+.bss            0x000000000000072c       0x20
  *(.bss)
  *(.bss.*)
- COMMON         0x0000000000000704       0x1c src/date-time.c.11.o
-                0x0000000000000704                timer
-                0x0000000000000708                battery_layer
-                0x000000000000070c                connection_layer
-                0x0000000000000710                text_time_layer
-                0x0000000000000714                text_date_layer
-                0x0000000000000718                window
-                0x000000000000071c                line_layer
+ COMMON         0x000000000000072c       0x20 src/date-time.c.13.o
+                0x000000000000072c                timer
+                0x0000000000000730                battery_layer
+                0x0000000000000734                connection_layer
+                0x0000000000000738                text_time_layer
+                0x000000000000073c                bar_layer
+                0x0000000000000740                text_date_layer
+                0x0000000000000744                window
+                0x0000000000000748                line_layer
 
 DISCARD
  libc.a(*)
@@ -809,9 +818,9 @@ OUTPUT(/home/samee/Pebble Apps/date-time-watchface/build/pebble-app.elf elf32-li
  .ARM.attributes
                 0x0000000000000019       0x29 /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
  .ARM.attributes
-                0x0000000000000042       0x33 src/date-time.c.11.o
+                0x0000000000000042       0x33 src/date-time.c.13.o
  .ARM.attributes
-                0x0000000000000075       0x33 appinfo.auto.c.11.o
+                0x0000000000000075       0x33 appinfo.auto.c.13.o
  .ARM.attributes
                 0x00000000000000a8       0x21 /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/lib/libpebble.a(tmp9Q2g01pebble.o)
  .ARM.attributes
@@ -822,39 +831,39 @@ OUTPUT(/home/samee/Pebble Apps/date-time-watchface/build/pebble-app.elf elf32-li
 .comment        0x0000000000000000       0x4e
  .comment       0x0000000000000000       0x4e /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
                                          0x4f (size before relaxing)
- .comment       0x0000000000000000       0x4f src/date-time.c.11.o
- .comment       0x0000000000000000       0x4f appinfo.auto.c.11.o
+ .comment       0x0000000000000000       0x4f src/date-time.c.13.o
+ .comment       0x0000000000000000       0x4f appinfo.auto.c.13.o
  .comment       0x0000000000000000       0x4f /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtend.o
 
-.debug_info     0x0000000000000000     0x1280
- .debug_info    0x0000000000000000      0xf1f src/date-time.c.11.o
- .debug_info    0x0000000000000f1f      0x361 appinfo.auto.c.11.o
+.debug_info     0x0000000000000000     0x1472
+ .debug_info    0x0000000000000000     0x112c src/date-time.c.13.o
+ .debug_info    0x000000000000112c      0x346 appinfo.auto.c.13.o
 
-.debug_abbrev   0x0000000000000000      0x390
- .debug_abbrev  0x0000000000000000      0x2e5 src/date-time.c.11.o
- .debug_abbrev  0x00000000000002e5       0xab appinfo.auto.c.11.o
+.debug_abbrev   0x0000000000000000      0x392
+ .debug_abbrev  0x0000000000000000      0x2e7 src/date-time.c.13.o
+ .debug_abbrev  0x00000000000002e7       0xab appinfo.auto.c.13.o
 
-.debug_loc      0x0000000000000000      0x1e6
- .debug_loc     0x0000000000000000      0x1e6 src/date-time.c.11.o
+.debug_loc      0x0000000000000000      0x2a7
+ .debug_loc     0x0000000000000000      0x2a7 src/date-time.c.13.o
 
-.debug_aranges  0x0000000000000000       0x70
+.debug_aranges  0x0000000000000000       0x80
  .debug_aranges
-                0x0000000000000000       0x58 src/date-time.c.11.o
+                0x0000000000000000       0x68 src/date-time.c.13.o
  .debug_aranges
-                0x0000000000000058       0x18 appinfo.auto.c.11.o
+                0x0000000000000068       0x18 appinfo.auto.c.13.o
 
-.debug_ranges   0x0000000000000000       0x48
- .debug_ranges  0x0000000000000000       0x48 src/date-time.c.11.o
+.debug_ranges   0x0000000000000000       0x58
+ .debug_ranges  0x0000000000000000       0x58 src/date-time.c.13.o
 
-.debug_line     0x0000000000000000      0x41a
- .debug_line    0x0000000000000000      0x2f8 src/date-time.c.11.o
- .debug_line    0x00000000000002f8      0x122 appinfo.auto.c.11.o
+.debug_line     0x0000000000000000      0x443
+ .debug_line    0x0000000000000000      0x321 src/date-time.c.13.o
+ .debug_line    0x0000000000000321      0x122 appinfo.auto.c.13.o
 
-.debug_str      0x0000000000000000      0xa4c
- .debug_str     0x0000000000000000      0x86e src/date-time.c.11.o
-                                        0x8d4 (size before relaxing)
- .debug_str     0x000000000000086e      0x1de appinfo.auto.c.11.o
-                                        0x385 (size before relaxing)
+.debug_str      0x0000000000000000      0xc5f
+ .debug_str     0x0000000000000000      0xb03 src/date-time.c.13.o
+                                        0xb72 (size before relaxing)
+ .debug_str     0x0000000000000b03      0x15c appinfo.auto.c.13.o
+                                        0x348 (size before relaxing)
 
-.debug_frame    0x0000000000000000       0xf4
- .debug_frame   0x0000000000000000       0xf4 src/date-time.c.11.o
+.debug_frame    0x0000000000000000      0x128
+ .debug_frame   0x0000000000000000      0x128 src/date-time.c.13.o

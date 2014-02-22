@@ -24,7 +24,7 @@ void handle_back_click(ClickRecognizerRef recognizer, void *context) {
 
 void click_config_provider(void *context) {
   const uint16_t repeat_interval_ms = 1000;
-  window_single_repeating_click_subscribe(BUTTON_ID_UP, repeat_interval_ms, handle_back_click);
+  window_single_repeating_click_subscribe(BUTTON_ID_BACK, repeat_interval_ms, handle_back_click);
 }
 
 void handle_bluetooth(bool connected){
@@ -82,8 +82,6 @@ void handle_deinit(void) {
   bluetooth_connection_service_unsubscribe();
 }
 
-
-
 void handle_init(void) {
   window = window_create();
   window_set_fullscreen(window, true);
@@ -92,7 +90,7 @@ void handle_init(void) {
   window_set_click_config_provider(window, click_config_provider);
 
   Layer *window_layer = window_get_root_layer(window);
-
+  // Date: wkday. mm/dd/yy
   text_date_layer = text_layer_create(GRect(0, 92, 145, 100));
   text_layer_set_text_color(text_date_layer, GColorBlack);
   text_layer_set_background_color(text_date_layer, GColorWhite);
@@ -100,6 +98,7 @@ void handle_init(void) {
   text_layer_set_text_alignment(text_date_layer, GTextAlignmentCenter);
   layer_add_child(window_layer, text_layer_get_layer(text_date_layer));
 
+  // Time - 12hr
   text_time_layer = text_layer_create(GRect(0, 117, 145, 50));
   text_layer_set_text_color(text_time_layer, GColorBlack);
   text_layer_set_background_color(text_time_layer, GColorClear);
@@ -107,6 +106,7 @@ void handle_init(void) {
   text_layer_set_text_alignment(text_time_layer, GTextAlignmentCenter);
   layer_add_child(window_layer, text_layer_get_layer(text_time_layer));
 
+  // Percent charged battery display
   battery_layer = text_layer_create(GRect(0, 0, 144-0, 168-68));
   text_layer_set_text_color(battery_layer, GColorWhite);
   text_layer_set_background_color(battery_layer, GColorClear);
@@ -115,6 +115,7 @@ void handle_init(void) {
   text_layer_set_text(battery_layer, "... charged");
   layer_add_child(window_layer, text_layer_get_layer(battery_layer));
 
+  // Bluetooth connection
   connection_layer = text_layer_create(GRect(0, 22, 145, 20));
   text_layer_set_text_color(connection_layer, GColorWhite);
   text_layer_set_background_color(connection_layer, GColorClear);
@@ -123,23 +124,29 @@ void handle_init(void) {
   text_layer_set_text(connection_layer, "");
   layer_add_child(window_layer, text_layer_get_layer(connection_layer));
 
+  // black seperator bar
   bar_layer = text_layer_create(GRect(0, 118, 145, 3));
   text_layer_set_background_color(bar_layer, GColorBlack);
   layer_add_child(window_layer, text_layer_get_layer(bar_layer));
 
+// White line from old UI
+/*
   GRect line_frame = GRect(8, 117, 130, 2);
   line_layer = layer_create(line_frame);
-//  layer_set_color(line_layer, GColorBlack);
+  layer_set_color(line_layer, GColorBlack);
   layer_set_update_proc(line_layer, line_layer_update_callback);
-//  layer_add_child(window_layer, line_layer);
+  layer_add_child(window_layer, line_layer);
+*/
 
   tick_timer_service_subscribe(MINUTE_UNIT, handle_minute_tick);
   battery_state_service_subscribe(&handle_battery);
   bluetooth_connection_service_subscribe(&handle_bluetooth);
 
+  // If bluetooth is disconnected, it will say so even if you leave watchface
   bool connected = bluetooth_connection_service_peek();
   if (!connected)
     text_layer_set_text(connection_layer, "BT: disconnected");
+    
   // TODO: Update display here to avoid blank display on launch?
 }
 

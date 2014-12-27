@@ -1,10 +1,10 @@
 {
   "uuid": "124288f5-4d75-4f89-a839-b4ec5f45f2c7",
-  "shortName": "Watchface - linked",
-  "longName": "Watchface - Am I Linked?",
+  "shortName": "Artz Watch",
+  "longName": "Artz Watchface",
   "companyName": "App Artz",
-  "versionCode": 3,
-  "versionLabel": "3.0.0",
+  "versionCode": 4,
+  "versionLabel": "4.0.0",
   "watchapp": {
     "watchface": false
   },
@@ -36,7 +36,7 @@
         "type": "font",
         "name": "FONT_DROID_SERIF_20",
         "file": "fonts/DroidSerif.ttf"
-      },                
+      },
       {
         "characterRegex": "[:0-9]",
         "type": "font",

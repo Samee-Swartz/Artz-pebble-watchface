@@ -1,13 +1,13 @@
-# project  configured on Fri Feb 21 23:05:20 2014 by
-# waf 1.7.11 (abi 98, python 20703f0 on linux2)
-# using /home/samee/pebble-dev/PebbleSDK-2.0-BETA4/Pebble/waf configure build
+# project  configured on Sat Dec 27 16:37:14 2014 by
+# waf 1.7.11 (abi 98, python 20706f0 on linux2)
+# using /home/samee/PebbleApps/pebble-dev/PebbleSDK-2.8.1/Pebble/waf configure build
 #
 ----------------------------------------
 Setting top to
-/home/samee/Pebble Apps/date-time-watchface
+/home/samee/PebbleApps/Artz watchface
 ----------------------------------------
 Setting out to
-/home/samee/Pebble Apps/date-time-watchface/build
+/home/samee/PebbleApps/Artz watchface/build
 ----------------------------------------
 Checking for program gcc,cc
 arm-none-eabi-gcc

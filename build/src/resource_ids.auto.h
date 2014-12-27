@@ -19,13 +19,3 @@ typedef enum {
   RESOURCE_ID_FONT_DROID_SERIF_42,
 
 } ResourceId;
-
-static const uint32_t resource_crc_table[] = {
-  3019824714,
-  2723793870,
-  1477497961,
-  3473145528,
-  56157681,
-  2037871994,
-};
-
